@@ -43,29 +43,42 @@ class App extends React.Component {
   render() {
     let hits = this.state.musicianFound.map(hit => {
       return (
-        <div className="col-6">
-            <div className="card results-card-artist">
-                <h5 className="card-header">
-                  <a className="btn btn-warning" onClick={() => this.getAlbums(hit.strArtist)}>{hit.strArtist}</a>
-                </h5>
-                <div className="card-body" style={{backgroundColor: 'black', color: 'white'}}>
-                  <h5 className="card-title">{hit.strGenre}</h5>
-                </div>
-            </div>
-        </div>
+        <li class="list-group-item eachHit">
+          <div className="row justify-content-between">
+            <a className="btn eachHit-btn" onClick={() => this.getAlbums(hit.strArtist)}>{hit.strArtist}</a>
+            <span className="eachHit-genre">{hit.strGenre}</span>
+          </div>
+        </li>
+        // <div className="eachHit">
+            
+        //     <div className="card results-card-artist">
+        //         <h5 className="card-header">
+        //           <a className="btn btn-dark" onClick={() => this.getAlbums(hit.strArtist)}>{hit.strArtist}</a>
+        //         </h5>
+        //         <div className="card-body" style={{backgroundColor: 'black', color: 'white'}}>
+        //           <h5 className="card-title">{hit.strGenre}</h5>
+        //         </div>
+        //     </div>
+        // </div>
       )
     })
 
     let albums = this.state.albums.map(album => {
       return (
-        <div className="col-4">
-            <div className="card results-card">
-              <div className="card-body">
-                <h3 className="card-title">{album.strAlbum}</h3>
-                <h5 className="card-title">{album.intYearReleased}</h5>
-              </div>
-            </div>
-        </div>
+        <li class="list-group-item eachHit">
+          <div className="row justify-content-between">
+            <span className="eachHit-album">{album.strAlbum}</span>
+            <span className="eachHit-genre">{album.intYearReleased}</span>
+          </div>
+        </li>
+        // <div>
+        //     <div className="card results-card">
+        //       <div className="card-body">
+        //         <h3 className="card-title">{album.strAlbum}</h3>
+        //         <h5 className="card-title">{album.intYearReleased}</h5>
+        //       </div>
+        //     </div>
+        // </div>
       )
     })
 
@@ -87,10 +100,14 @@ class App extends React.Component {
             </div>
         </div>
         {!this.state.isSearchSubmitted ? null : <h1>'{this.state.musicianSeeked}'</h1>}
-        <div className="container" id="results">
+        <div className="container results">
           <div className="row justify-content-center">
-            {hits == [] ? null : hits}
-            {albums == [] ? null : albums}
+            <div className="col-6">
+              <ul class="list-group">
+                {hits == [] ? null : hits}
+              </ul>
+            </div>
+            <div className="col-6">{albums == [] ? null : albums}</div>
           </div>
         </div>      
       </div>

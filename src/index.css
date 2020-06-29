@@ -28,6 +28,7 @@ code {
 
 .search {
   margin-top: 3em;
+  margin-bottom: 2em;
   background-color: rgb(11, 162, 221);
 }
 
@@ -57,7 +58,7 @@ code {
   background-color: orange;
 }
 
-#results {
+.results {
   margin-top: 3em;
 }
 
@@ -75,4 +76,34 @@ code {
 
 .album-btn {
   color: white;
+}
+
+.eachHit {
+  background-color: black;
+}
+
+.eachHit-row {
+ height: 4em;
+}
+
+.eachHit-btn {
+  background-color: rgb(11, 162, 221);
+  color: white !important;
+  text-shadow:  0 0 3px black;
+}
+
+.eachHit-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.eachHit-genre {
+  color: white;
+}
+
+.eachHit-album {
+  background-color: orange;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 6px;
 }
