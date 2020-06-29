@@ -61,8 +61,16 @@ code {
   margin-top: 3em;
 }
 
+.results-card-artist {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 1em;
+}
+
 .results-card {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .album-btn {

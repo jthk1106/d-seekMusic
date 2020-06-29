@@ -43,12 +43,12 @@ class App extends React.Component {
   render() {
     let hits = this.state.musicianFound.map(hit => {
       return (
-        <div className="col-10">
-            <div className="card results-card">
+        <div className="col-6">
+            <div className="card results-card-artist">
                 <h5 className="card-header">
                   <a className="btn btn-warning" onClick={() => this.getAlbums(hit.strArtist)}>{hit.strArtist}</a>
                 </h5>
-                <div className="card-body">
+                <div className="card-body" style={{backgroundColor: 'black', color: 'white'}}>
                   <h5 className="card-title">{hit.strGenre}</h5>
                 </div>
             </div>
@@ -58,7 +58,7 @@ class App extends React.Component {
 
     let albums = this.state.albums.map(album => {
       return (
-        <div className="col-6">
+        <div className="col-4">
             <div className="card results-card">
               <div className="card-body">
                 <h3 className="card-title">{album.strAlbum}</h3>
