@@ -49,17 +49,6 @@ class App extends React.Component {
             <span className="eachHit-genre">{hit.strGenre}</span>
           </div>
         </li>
-        // <div className="eachHit">
-            
-        //     <div className="card results-card-artist">
-        //         <h5 className="card-header">
-        //           <a className="btn btn-dark" onClick={() => this.getAlbums(hit.strArtist)}>{hit.strArtist}</a>
-        //         </h5>
-        //         <div className="card-body" style={{backgroundColor: 'black', color: 'white'}}>
-        //           <h5 className="card-title">{hit.strGenre}</h5>
-        //         </div>
-        //     </div>
-        // </div>
       )
     })
 
@@ -71,14 +60,6 @@ class App extends React.Component {
             <span className="eachHit-genre">{album.intYearReleased}</span>
           </div>
         </li>
-        // <div>
-        //     <div className="card results-card">
-        //       <div className="card-body">
-        //         <h3 className="card-title">{album.strAlbum}</h3>
-        //         <h5 className="card-title">{album.intYearReleased}</h5>
-        //       </div>
-        //     </div>
-        // </div>
       )
     })
 
