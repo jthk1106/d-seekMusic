@@ -18,9 +18,9 @@ class App extends React.Component {
       .then(res => res.json())
       .then(res2 => {
         if(res2.artists !== null) {
-          this.setState({musicianFound: [...res2.artists]})
+          this.setState({musicianFound: [...res2.artists], albums: []})
         } else {
-          this.setState({musicianFound: [{strArtist: 'not found'}]})
+          this.setState({musicianFound: [{strArtist: 'not found'}], albums: []})
         }
       })
       .then(this.setState({isSearchSubmitted: true}))
@@ -54,10 +54,10 @@ class App extends React.Component {
 
     let albums = this.state.albums.map(album => {
       return (
-        <li class="list-group-item eachHit">
+        <li class="list-group-item eachAlbum">
           <div className="row justify-content-between">
             <span className="eachHit-album">{album.strAlbum}</span>
-            <span className="eachHit-genre">{album.intYearReleased}</span>
+            <span className="eachHit-year">{album.intYearReleased}</span>
           </div>
         </li>
       )

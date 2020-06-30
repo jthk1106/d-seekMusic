@@ -80,6 +80,11 @@ code {
 
 .eachHit {
   background-color: black;
+  border-color: white;
+}
+
+.eachAlbum {
+  background-color: white;
 }
 
 .eachHit-row {
@@ -106,4 +111,12 @@ code {
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 6px;
+}
+
+.eachHit-year {
+  color: black;
+  /* background-color: rgb(11, 162, 221);
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 6px; */
 }
